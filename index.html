@@ -21,8 +21,8 @@
             
             // question 5 images
             $(".q5Choice").on("click", function() {
-                $(".q5Choice").css("background", "");
-                $(this).css("background", "rgb(255, 255, 0)");
+            $(".q5Choice").css("background", "");
+            $(this).css("background", "rgb(255, 255, 0)");
             });
             
             displayChoices();
@@ -52,7 +52,25 @@
                 let isValid = true;
                 if ($("#q1").val() == "") {
                     isValid = false;
-                    $("#validationFdbk").html("Question 1 was not answered");
+                    $("#validationFdbk").append("Question 1 was not answered<br>");
+                }
+                if ($("#q2").val() == "") {
+                    isValid = false;
+                    $("#validationFdbk").append("Question 2 was not answered<br>");
+                }
+                
+                if ($("input[name=q4]:checked").val() == null) {
+                    isValid = false;
+                    $("#validationFdbk").append("Question 4 was not answered<br>");
+                }
+                
+                if ($("input[name=q6]:checked").val() == null) {
+                    isValid = false;
+                    $("#validationFdbk").append("Question 6 was not answered<br>");
+                }
+                if ($("#q7").val() == "") {
+                    isValid = false;
+                    $("#validationFdbk").append("Question 7 was not answered<br>");
                 }
                 return isValid;
             }
@@ -84,6 +102,7 @@
                 let q2Response = $("#q2").val();
                 let q4Response = $("input[name=q4]:checked").val();
                 let q6Response = $("input[name=q6]:checked").val();
+                let q7Response = $("#q7").val();
 
                 // question 1
                 if (q1Response == "sacramento") {
@@ -134,7 +153,7 @@
                 }
                 
                 // question 7
-                if (q1Response == "50") {
+                if (q7Response == "50") {
                     rightAnswer(7);
                 } else {
                     wrongAnswer(7);
@@ -220,7 +239,7 @@
     <div id="q7Feedback"></div>
     <br />
     
-    <h3 id="validationFdbk" class="bg-danger text-white"></h3>
+    <h5 id="validationFdbk" class="bg-danger text-white"></h5>
     <button class="btn btn-outline-success"> Submit Quiz </button>
     <br /><br />
     <h2 id="totalScore"></h2>
