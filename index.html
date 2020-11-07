@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>US Quiz</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).read(function() {
+            $("button").on("click", function(){
+                
+                console.log($("#q1").val());
+            }); //click
+            
+        }) //ready
+    </script>
+</head>
+<body class="text-center">
+    <h1 class="jumbotron"> US Geography Quiz </h1>
+    <h3>What is the capital of California?</h3>
+    <input type="text" id="q1" />
+    <br />
+    <button class="btn btn-info"> Submit Quiz </button>
+        <footer>
+
+            <div><img src="img/CSUMBLogo.png" alt="CSUMB Logo" style="width: 40%"></div>
+            <div>CST336 Internet Programming. 2020 &copy; Petrovich <br />
+            <strong>Disclaimer: </strong> The information on this webpage is fictitious. <br />
+            It is used for academic purposes only.</div>
+        </footer>
+        <!-- closing footer -->
+        
+</body>
+<!-- closing body -->
+</html>
