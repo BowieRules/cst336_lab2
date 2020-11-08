@@ -64,7 +64,8 @@
                     isValid = false;
                     $("#validationFdbk").append("Question 2 was not answered<br>");
                 }
-                if ($("input[name=q3]:checked").val() == null) {
+                if (!$("#Jefferson").is(":checked") && !$("#Roosevelt").is(":checked")
+                    && !$("#Jackson").is(":checked") && !$("#Franklin").is(":checked")) {
                     isValid = false;
                     $("#validationFdbk").append("Question 3 was not answered<br>");
                 }
@@ -88,7 +89,8 @@
                     isValid = false;
                     $("#validationFdbk").append("Question 7 was not answered<br>");
                 }
-                if ($("input[name=q8]:checked").val() == null) {
+                if (!$("#Kennedy").is(":checked") && !$("#Lincoln").is(":checked")
+                    && !$("#Roosevelt").is(":checked") && !$("#McKinley").is(":checked")) {
                     isValid = false;
                     $("#validationFdbk").append("Question 8 was not answered<br>");
                 }
