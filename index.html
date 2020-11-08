@@ -90,7 +90,7 @@
                     $("#validationFdbk").append("Question 7 was not answered<br>");
                 }
                 if (!$("#Kennedy").is(":checked") && !$("#Lincoln").is(":checked")
-                    && !$("#Roosevelt").is(":checked") && !$("#McKinley").is(":checked")) {
+                    && !$("#FDR").is(":checked") && !$("#McKinley").is(":checked")) {
                     isValid = false;
                     $("#validationFdbk").append("Question 8 was not answered<br>");
                 }
@@ -196,7 +196,7 @@
                 
                 // question 8
                 if ($("#Kennedy").is(":checked") && $("#Lincoln").is(":checked")
-                    && !$("#Roosevelt").is(":checked") && !$("#McKinley").is(":checked")){
+                    && $("#FDR").is(":checked") && $("#McKinley").is(":checked")){
                     rightAnswer(8);
                 }
                 else {
@@ -262,14 +262,15 @@
         <option value="ms">Mississippi</option>
         <option value="mo">Missouri</option>
         <option value="co">Colorado</option>
-        <option value="de">Delware</option>
+        <option value="de">Delaware</option>
     </select>
     <div id="q2Feedback"></div>
     </div></div>
     <br />
     
     <h3><span id="markImg3"></span>3. What presidents are carved into mount Rushmore?</h3>
-    <div class="form-check">
+    <div class="row justify-content-md-center">
+    <div class="col-md-3">
     <div class="form-check">
     <input type="checkbox" id="Jackson" class="form-check-input">
     <label for="Jackson" class="form-check-label">A. Jackson</label>
@@ -287,6 +288,7 @@
     <label for="Roosevelt" class="form-check-label">T. Roosevelt</label>
     </div>
     <div id="q3Feedback"></div>
+    </div>
     </div>
     <br />
     
@@ -312,7 +314,7 @@
     
     <h3><span id="markImg7"></span>7. How many stars are displayed on the American flag?</h3>
     <div class="row justify-content-md-center">
-    <div class="col-md-2">
+    <div class="col-md-1">
     <input type="text" id="q7" class="form-control form-control-sm" />
     <br /><br />
     <div id="q7Feedback"></div>
@@ -323,16 +325,16 @@
     <h3><span id="markImg8"></span>8. Which president(s) died in office?</h3>
     <div class="form-check">
         <div class="form-check">
-        <input type="checkbox" id="Roosevelt" class="form-check-input">
-        <label for="Roosevelt" class="form-check-label">T. Roosevelt</label>
+        <input type="checkbox" id="Kennedy" class="form-check-input">
+        <label for="Kennedy" class="form-check-label">John F. Kennedy</label>
         </div>
         <div class="form-check">
         <input type="checkbox" id="Lincoln" class="form-check-input">
         <label for="Lincoln" class="form-check-label">Abraham Lincoln</label>
         </div>
         <div class="form-check">
-        <input type="checkbox" id="Roosevelt" class="form-check-input">
-        <label for="Roosevelt" class="form-check-label">Franklin D. Roosevelt</label>
+        <input type="checkbox" id="FDR" class="form-check-input">
+        <label for="FDR" class="form-check-label">Franklin D. Roosevelt</label>
         </div>
         <div class="form-check">
         <input type="checkbox" id="McKinley" class="form-check-input">
